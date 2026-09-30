@@ -1,0 +1,101 @@
+:root {
+    --app-background: #111318;
+    --app-surface: #191c22;
+    --app-surface-secondary: #20242c;
+    --app-surface-elevated: #282c35;
+
+    --app-text: #f5f7fa;
+    --app-text-secondary: #aeb4c0;
+    --app-text-muted: #737985;
+
+    --app-primary: #7c8cff;
+    --app-primary-soft: #aeb6ff;
+    --app-primary-dark: #5968e8;
+
+    --app-accent: #64d8ff;
+
+    --app-success: #1db954;
+    --app-warning: #ffc857;
+    --app-danger: #dd0000;
+
+    --app-border: rgba(255, 255, 255, 0.08);
+    --app-border-light: rgba(255, 255, 255, 0.12);
+    --app-border-dark: rgba(0, 0, 0, 0.18);
+
+    --app-glass: rgba(25, 28, 34, 0.68);
+    --app-glass-light: rgba(255, 255, 255, 0.06);
+    --app-glass-border: rgba(255, 255, 255, 0.10);
+    --app-glass-blur: blur(20px);
+
+    --app-shadow-sm:
+        0 2px 8px rgba(0, 0, 0, 0.15);
+
+    --app-shadow-md:
+        0 8px 24px rgba(0, 0, 0, 0.22);
+
+    --app-shadow-lg:
+        0 16px 40px rgba(0, 0, 0, 0.30);
+
+    --app-shadow-glow:
+        0 0 24px rgba(124, 140, 255, 0.18);
+
+    --app-radius-xs: 6px;
+    --app-radius-sm: 10px;
+    --app-radius-md: 14px;
+    --app-radius-lg: 20px;
+    --app-radius-xl: 28px;
+    --app-radius-pill: 999px;
+
+    --app-space-xs: 4px;
+    --app-space-sm: 8px;
+    --app-space-md: 12px;
+    --app-space-lg: 16px;
+    --app-space-xl: 24px;
+    --app-space-2xl: 32px;
+    --app-space-3xl: 48px;
+
+    --app-font-xs: 11px;
+    --app-font-sm: 13px;
+    --app-font-md: 15px;
+    --app-font-lg: 18px;
+    --app-font-xl: 24px;
+    --app-font-2xl: 32px;
+
+    --app-weight-regular: 400;
+    --app-weight-medium: 500;
+    --app-weight-semibold: 600;
+    --app-weight-bold: 700;
+
+    --app-transition-fast: 150ms ease;
+    --app-transition-normal: 250ms ease;
+    --app-transition-slow: 400ms ease;
+
+   
+
+    --app-z-base: 1;
+    --app-z-content: 10;
+    --app-z-header: 100;
+    --app-z-modal: 500;
+    --app-z-toast: 1000;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Google Sans;
+    min-height: 100vh;
+    background: var(--app-background);
+    color: var(--app-text);
+}
+
+button{
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s ease;
+}

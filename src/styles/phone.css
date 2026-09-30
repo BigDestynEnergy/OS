@@ -1,0 +1,161 @@
+.phone {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--app-space-xl);
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: var(--app-background);
+    color: var(--app-text);
+    animation: down var(--app-transition-slow) forwards;
+}
+
+
+.phone .header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    padding: var(--app-radius-md) var(--app-radius-xl);
+    align-items: center;
+    justify-content: space-between;
+    background: var(--app-surface);
+}
+
+.phone .header .return{
+    padding: var(--app-radius-sm);
+    background: var(--app-surface-secondary);
+    display: flex;
+    align-items: center;
+    border-radius: var(--app-radius-pill);
+    cursor: pointer;
+}
+
+.phone .header .return:hover{
+    background: var(--app-surface-elevated);
+}
+
+.phone .header .items{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.phone .header .items .item{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    border: 1px solid transparent;
+    color: var(--app-text-secondary);
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+.phone .header .items .item.active{
+    color: var(--app-text);
+    background: var(--app-surface-elevated);
+    padding: 6px;
+    border-color: var(--app-text-secondary);
+}
+
+.phone-section {
+    width: min(100%, 380px);
+    display: flex;
+    flex-direction: column;
+    gap: var(--app-space-xl);
+    animation: sideX .3s ease forwards;
+}
+
+
+.phone-section input {
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+
+    padding: 0 var(--app-space-lg);
+
+    border: 1px solid var(--app-glass-border);
+    border-radius: var(--app-radius-lg);
+    outline: none;
+
+    background: var(--app-glass);
+    color: var(--app-text);
+
+    backdrop-filter: var(--app-glass-blur);
+    -webkit-backdrop-filter: var(--app-glass-blur);
+
+    box-shadow: var(--app-shadow-md);
+
+    font-size: var(--app-font-2xl);
+    font-weight: var(--app-weight-medium);
+    text-align: center;
+
+    transition:
+        border-color var(--app-transition-fast),
+        box-shadow var(--app-transition-fast);
+}
+
+.phone-section input:focus {
+    border-color: var(--app-primary);
+    box-shadow: var(--app-shadow-glow);
+}
+
+.phone-section .tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--app-space-md);
+}
+
+.phone-section .tabs button {
+    border: 1px solid var(--app-border);
+    border-radius: var(--app-radius-lg);
+    outline: none;
+    padding: var(--app-radius-sm);
+    background: var(--app-surface);
+    color: var(--app-text);
+    font-size: var(--app-font-xl);
+    font-weight: var(--app-weight-medium);
+
+    cursor: pointer;
+
+    box-shadow: var(--app-shadow-sm);
+
+    transition: all .3s ease;
+}
+
+.phone-section .tabs button:hover {
+    background: var(--app-surface-secondary);
+    border-color: var(--app-border-light);
+    box-shadow: var(--app-shadow-md);
+}
+
+.phone-section .tabs button:active {
+    transform: scale(0.92);
+    background: var(--app-surface-elevated);
+}
+
+.phone-section .tabs button:nth-child(10),
+.phone-section .tabs button:nth-child(12) {
+    color: var(--app-text-secondary);
+}
+
+.phone-section .tabs button:nth-child(-n + 9),
+.phone-section .tabs button:nth-child(11) {
+    color: var(--app-text);
+}
+
+.phone-section .tabs button:nth-child(11) {
+    font-size: var(--app-font-2xl);
+}
+
+.phone-section .tabs button:nth-child(10):hover,
+.phone-section .tabs button:nth-child(12):hover {
+    color: var(--app-primary-soft);
+    border-color: var(--app-primary);
+    box-shadow: var(--app-shadow-glow);
+}

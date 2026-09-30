@@ -1,0 +1,48 @@
+
+@keyframes down{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes side{
+    from{
+        opacity: 0;
+        transform: translateX(6px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes sideX{
+    from{
+        opacity: 0;
+        transform: translateX(-6px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
