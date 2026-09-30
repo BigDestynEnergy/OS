@@ -188,18 +188,18 @@ export default function Home({ set }) {
             <footer className="home-dock">
 
                 <div className="dock-item">
-                    <LuPhone />
+                    <LuPhone onClick={()=>manage("phone")}/>
                 </div>
 
-                <div className="dock-item">
+                <div className="dock-item" onClick={()=>manage("messages")}>
                     <LuMessageCircle />
                 </div>
 
-                <div className="dock-item dock-camera">
+                <div className="dock-item dock-camera" onClick={()=>manage("camera")}>
                     <LuCamera />
                 </div>
 
-                <div className="dock-item">
+                <div className="dock-item" onClick={()=>manage("music")}>
                     <LuMusic />
                 </div>
 

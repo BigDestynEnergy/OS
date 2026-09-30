@@ -8,7 +8,7 @@ export const screens = (state, set) => {
         <>
         {state === "home" && <Home set={set}/>}
         {state === "phone" && <Phone set={set}/>}
-        {state === "messages" && <Messages/>}
+        {state === "messages" && <Messages set={set}/>}
         {state === "music" && <Music set={set}/>}
         </>
     )
