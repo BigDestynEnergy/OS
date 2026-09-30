@@ -4,7 +4,8 @@ import { LuChevronLeft, LuVolume } from "react-icons/lu";
 import SongsList from "../blocks/songs list";
 import { formatFileTime } from "../tools/Format File Time";
 import Controls from "../blocks/controls";
-import jsmediatags from "jsmediatags";
+import jsmediatags from "jsmediatags/dist/jsmediatags.min.js";
+
 
 export default function Music({ set }) {
   const [songs, setSongs] = useState([]);
