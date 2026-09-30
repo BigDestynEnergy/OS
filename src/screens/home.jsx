@@ -79,7 +79,7 @@ export default function Home({ set }) {
 
                     <div className="battery">
                         <LuBatteryFull />
-                        <span>87%</span>
+                        <span>98%</span>
                     </div>
 
                     <div className="security">
