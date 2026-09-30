@@ -1,0 +1,69 @@
+.form{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    display: flex;
+    padding: var(--app-radius-sm);
+}
+
+.form form{
+    background: var(--app-text);
+    color: var(--app-background);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    animation: up .3s ease forwards;
+    align-items: center;
+    border-radius: var(--app-radius-xl);
+    padding: var(--app-radius-xl);
+}
+
+.form form .group{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+form .group label{
+    font-size: 14px;
+    text-transform: lowercase;
+}
+
+form .close{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    background: var(--app-text-secondary);
+    display: flex;
+    padding: 6px;
+    border-radius: var(--app-radius-md);
+    cursor: pointer;
+}
+
+form .group input{
+    padding: var(--app-radius-sm);
+    width: 250px;
+    border: 2px solid var(--app-border-dark);
+    border-radius: var(--app-radius-sm);
+    transition: border-color .3s ease;
+}
+
+.form form .group input:focus{
+    border-color: var(--app-background);
+}
+
+.form form button{
+    width: 96%;
+    padding: var(--app-radius-md);
+    margin-top: 4px;
+    border: 2px solid var(--app-background);
+    border-radius: var(--app-radius-xl);
+    background: var(--app-background);
+    color: var(--app-text);
+}
+
+.form form .group small{
+    color: var(--app-danger);
+}

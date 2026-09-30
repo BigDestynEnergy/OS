@@ -38,6 +38,18 @@
         transform var(--app-transition-fast);
 }
 
+.contact.blocked {
+    opacity: 0.55;
+    filter: grayscale(0.5);
+}
+
+.contact.blocked .contact-name::after {
+    content: " • BLOCKED";
+    color: var(--app-danger);
+    font-size: var(--app-font-xs);
+    margin-left: 6px;
+}
+
 .contacts-list .contact:hover {
     background: var(--app-surface-secondary);
     border-color: var(--app-border);
@@ -125,7 +137,7 @@
 
 .context-menu .buttons .btn{
     width: 90%;
-    padding: 6px;
+    padding: 14px;
     border: 1px solid var(--app-text-muted);
     background: var(--app-text);
     border-radius: 4px;

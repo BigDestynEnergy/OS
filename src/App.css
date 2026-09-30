@@ -99,3 +99,9 @@ button{
     cursor: pointer;
     transition: all .3s ease;
 }
+
+input{
+    font-family: inherit;
+    transition: all .3s ease;
+    outline: none;
+}

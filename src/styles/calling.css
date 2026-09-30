@@ -1,0 +1,42 @@
+
+.calling{
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: up .3s ease forwards;
+    background: var(--app-glass);
+    backdrop-filter: var(--app-blur);
+    flex-direction: column;
+}
+
+.calling .circle{
+    padding: 32px;
+    border-radius: var(--app-radius-pill);
+    box-shadow: var(--app-shadow-glow);
+    background: var(--app-accent);
+    animation: pulsate .9s ease infinite;
+    margin-bottom: 20px;
+}
+
+
+
+.calling span{
+    padding: var(--app-radius-md);
+    background: var(--app-danger);
+    margin-top: 40px;
+    border-radius: var(--app-radius-sm);
+    cursor: pointer;
+}
+
+@keyframes pulsate{
+    0%{
+        transform: scale(.6);
+    }
+
+    100%{
+        transform: scale(1.25);
+    }
+}

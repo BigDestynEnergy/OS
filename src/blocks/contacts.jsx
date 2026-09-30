@@ -9,59 +9,7 @@ const options = [
     {name: "Block", icon: BiBlock, over: "purple"}
 ]
 
- const contacts = [
-        {
-            id: 1,
-            name: "Amanda Banda",
-            phone: "+265 991 234 567",
-            initials: "AB"
-        },
-        {
-            id: 2,
-            name: "Brian Phiri",
-            phone: "+265 888 456 123",
-            initials: "BP"
-        },
-        {
-            id: 3,
-            name: "Chisomo Mwale",
-            phone: "+265 999 782 341",
-            initials: "CM"
-        },
-        {
-            id: 4,
-            name: "Daniel Mbewe",
-            phone: "+265 881 654 290",
-            initials: "DM"
-        },
-        {
-            id: 5,
-            name: "Esther Nkhoma",
-            phone: "+265 991 345 678",
-            initials: "EN"
-        },
-        {
-            id: 6,
-            name: "Grace Zimba",
-            phone: "+265 888 901 234",
-            initials: "GZ"
-        },
-        {
-            id: 7,
-            name: "James Chirwa",
-            phone: "+265 999 567 890",
-            initials: "JC"
-        },
-        {
-            id: 8,
-            name: "Linda Kumwenda",
-            phone: "+265 881 234 567",
-            initials: "LK"
-        }
-    ];
-
-
-export default function ContactsList() {
+export default function ContactsList({contacts, removeContact, blockContact}) {
     const [contextMenu, setContextMenu] = useState(null);
     const closeRef = useRef();
    
@@ -113,13 +61,31 @@ export default function ContactsList() {
        }
     },[])
 
+
+  const manageMenu = (btn, userId) => {
+
+    if (btn.name === "Delete") {
+        removeContact(userId);
+        setContextMenu(null);
+    }
+
+    if(btn.name === "Block"){
+        blockContact(userId);
+        console.log(contacts);
+        setContextMenu(null);
+    }
+
+};
+
     return (
         <div className="contacts-list">
 
-            {contacts.map((contact) => (
+            {contacts.length === 0 ? (<p>No contacts found</p>)
+            : contacts.map((contact) => (
 
                 <div
-                    className="contact"
+                    className={contact.blocked ? "contact blocked" : "contact"}
+                    onDoubleClick={(e)=>manageContext(e, contact)}
                     onContextMenu={(e)=>manageContext(e, contact)}
                     key={contact.id}
                    
@@ -148,6 +114,7 @@ export default function ContactsList() {
             {contextMenu && (
                 <div className="context-menu"
                  ref={closeRef}
+
                 style={{
                     position:"fixed",
                     left: contextMenu.x,
@@ -158,6 +125,7 @@ export default function ContactsList() {
                     <div className="buttons">
                         {options.map((btn, index) => (
                             <button
+                            onClick={()=>manageMenu(btn, contextMenu.user.id)}
                             className={`btn ${btn.over}`}
                             key={index}>
                                 <span>{btn.name}</span>
